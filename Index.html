@@ -1,0 +1,163 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Exercício - Bootstrap Avançado</title>
+    <link rel="stylesheet" href="/lib/bootstrap.min.css">
+    <style>
+        header {
+            top: 0;
+            left: 0;
+            padding-top: 30px;
+        }
+
+        .navbar-nav .nav-link.active{
+            color: #fff;
+        }
+
+        .nav-link{
+            text-align: center;
+        }
+
+        h2 {
+            margin: 20px;
+            padding-top: 40px;
+            font-weight: bold;
+        }
+
+
+        .grid {
+            margin-top: 60px;
+            margin-bottom: 20px;
+            height: 100vh;
+        }
+
+        .card-img-overlay {
+            background-color: rgba(0, 0, 0, 0.5);
+        }
+    </style>
+</head>
+<body>
+    <header id="cabecalho">
+        <div class="navbar navbar-expand-lg">
+            <div class="container">
+                <h1>Exercício - Bootstrap Avançado</h1>
+                <button type="button" class="navbar-toggler" data-bs-toggle="collapse" data-bs-target="#menu">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+                <nav class="collapse navbar-collapse justify-content-end" id="menu">
+                    <ul class="nav navbar-nav nav-pills">
+                        <li class="nav-item">
+                            <a class="nav-link active" href="#carousel">Carousel</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="#cards">Cards</a>
+                        </li>
+                    </ul>
+                </nav>
+            </div>
+        </div>
+    </header>
+    
+    <div class="container" data-bs-spy="scroll" data-bs-target="#cabecalho">
+        <section>
+            <h2 id="carousel">
+                Carousel
+            </h2>
+            <div id="carousel-exercicio" class="carousel carousel-fade slide" data-bs-ride="carousel">
+                <div class="carousel-inner">
+                    <div data-bs-interval="3000" class="carousel-item active">
+                        <img class="d-block w-100" src="https://cdn.pixabay.com/photo/2023/08/12/04/24/mabry-mill-8184715_1280.jpg">
+                        <div class="carousel-caption">
+                            <h2>Foto de um moinho</h2>
+                        </div>
+                    </div>
+                    <div data-bs-interval="3000" class="carousel-item">
+                        <img class="d-block w-100" src="https://cdn.pixabay.com/photo/2023/03/31/22/21/animal-7891005_1280.jpg">
+                        <div class="carousel-caption">
+                            <h2>Foto de um pássaro</h2>
+                        </div>
+                    </div>
+                    <div data-bs-interval="3000" class="carousel-item">
+                        <img class="d-block w-100" src="https://cdn.pixabay.com/photo/2023/05/01/14/14/mountains-7963159_1280.jpg">
+                        <div class="carousel-caption">
+                            <h2>Foto de uma montanha</h2>
+                        </div>
+                    </div>
+                </div>
+        
+                <button data-bs-target="#carousel-exercicio" data-bs-slide="prev" class="carousel-control-prev" type="button">
+                    <span class="carousel-control-prev-icon"></span>
+                </button>
+               <button data-bs-target="#carousel-exercicio" data-bs-slide="next" class="carousel-control-next" type="button">
+                    <span class="carousel-control-next-icon"></span>
+               </button>
+               <div class="carousel-indicators">
+                    <button type="button" data-bs-target="#carousel-exercicio" class="active" data-bs-slide-to="0"></button>
+                    <button type="button" data-bs-target="#carousel-exercicio" data-bs-slide-to="1"></button>
+                    <button type="button" data-bs-target="#carousel-exercicio" data-bs-slide-to="2"></button>
+               </div>
+            </div>
+        </section>
+
+        <section class="grid">
+            <h2 id="cards">Cards</h2>
+        <div class="row">
+            <div class="col-lg-4 col-md-6 col-sm-12">
+                <article class="card">
+                    <header class="card-header">
+                        Fullstack Java
+                    </header>
+                    <img src="lib/bootstrap.png">
+                    <div class="card-body">
+                        <h3 class="card-tilte">Cards do Bootstrap</h3>
+                        <p class="card-text">
+                            Conhecendo os cards do Bootstrap e suas variações.
+                        </p>
+                        <a href="#" class="btn btn-primary">Leia mais</a>
+                    </div>
+                    <footer class="card-footer">
+                        Postado em <time>22/08/2023 às 15:00</time>
+                    </footer>
+                </article>
+            </div>
+            <div class="col-lg-4 col-md-6 col-sm-12">
+                <div class="card text-bg-dark">
+                    <img src="https://cdn.pixabay.com/photo/2015/06/24/16/54/lighthouse-820431_1280.jpg">
+                    <div class="card-img-overlay">
+                        <h3 class="card-tilte">Título do Card</h3>
+                        <h4 class="card-subtitle">Subtítulo do Card</h4>
+                        <p class="card-text">
+                            Lorem ipsum dolor sit amet consectetur, adipisicing elit. Amet ab sapiente expedita ea. 
+                            Sit ab fugiat sunt molestiae, laudantium incidunt aliquam, voluptatem labore possimus 
+                            doloremque saepe voluptate quidem atque officia.
+                        </p>
+                        <a href="#" class="btn btn-primary">Botão Link</a>
+                    </div>
+                </div>
+            </div>
+            <div class="col-lg-4 col-md-6 col-sm-12">
+                <div class="card text-bg-dark">
+                    <div class="card-header">
+                        Cabeçalho do header
+                    </div>
+                    <img src="https://cdn.pixabay.com/photo/2020/04/25/13/28/bird-5090810_1280.jpg">
+                    <div class="card-body">
+                        <h3 class="card-tilte">Título do Card</h3>
+                        <h4 class="card-subtitle">Subtítulo do Card</h4>
+                        <p class="card-text">
+                            Lorem ipsum dolor sit amet consectetur, adipisicing elit. Amet ab sapiente expedita ea. 
+                            Sit ab fugiat sunt molestiae, laudantium incidunt aliquam, voluptatem labore possimus 
+                            doloremque saepe voluptate quidem atque officia.
+                        </p>
+                        <a href="#" class="btn btn-primary">Botão Link</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+        </section>
+    </div>
+    <script src="/lib/bootstrap.bundle.min.js"></script>
+</body>
+</html> 
